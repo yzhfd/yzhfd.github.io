@@ -8,15 +8,9 @@ titles:
 key: page-about
 ---
 
-Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
+欢迎大家来到我的博客。
 
-{% highlight javascript %}
-(() => console.log('hello, world!'))();
-{% endhighlight %}
-
-## Skills
-
-- HTML5, CSS3(SASS), JavaScript(ES2017, Node.js), Bash(Zsh)
-- React, React Native, Vue.js
-- gulp, webpack
-- Adobe Photoshop, Sketch
+## 关于我
+- [《iOS开发：从零基础到精通》](https://detail.tmall.com/item.htm?spm=a230r.1.14.257.5e771dc4X4HGGu&id=565820932718&ns=1&abbucket=1) 清华大学出版社 是本书作者之一
+- 热衷于golang语言开发
+- 用PHP大概7年时间，比较熟悉
