@@ -1,4 +1,5 @@
 
+##反射机制介绍
 
 反射是指一门编程语言可以在运行时( runtime )检查其数据结构的能力。利用 Go 语言的反射机制，可以获取结构体的公有字段以及私有字段的标签名，甚至一些其他比较敏感的信息。
 
@@ -29,6 +30,7 @@ insert into messages set id=:id, channel=:channel,...
 的确我们可以通过引用 reflect 包来达到我们的上述需求。接下来我将会带着大家一起来领略一下整个实现过程，目前有很多 ORM 包也是使用了跟我类似的方法来达到相同的目的。
 
 ## 把结构体转为 reflect.value 类型
+
 我们需要先创建一个 reflect.Value 的实例，以便于能够获取结构体的字段。同时我们也可以从该实例中获取结构体的函数。创建一个 reflect.Value 实例非常直接：
 ```go
 message_value := reflect.ValueOf(message)
@@ -46,6 +48,7 @@ if message_value.Kind() == reflect.Ptr{
 然后我们再调用 message_value.NumField() 就会正确的输出结构体字段的总数。接下来我们将会使用这个值通过循环迭代的方式来获取所有字段的名称和对应的字段值。
 
 ##读取字段详情
+
 从结构体字段中我们可以获取很多重要的信息，不过我们最感兴趣的还是想要获取字段声明中的标签信息。由于 reflect.Value 是用来处理结构体中每个字段实际存储的值，所以我们需要用 reflect.Type 来获取字段的名称（比如 UserName ）或者关联的标签名。
 假如我们想要获取结构体所有字段的详细信息列表，详细信息包含字段名称，含有“db”的字段关联的标签名以及字段实际存储的值，代码可以这样写：
 ```go
@@ -66,6 +69,7 @@ for i:=0;i<len(message_fileds);i++{
 上述代码可以看出每个字段的实际值通过 reflect.Value.Interface() 获取，字段的名称和字段的标签名通过 reflect.Type 获取。你可以在 [go playground](https://play.golang.org/p/Bu0J-jlsLB7) 上跑一下上述完整的示例。
 
 ##组合一下功能
+
 其实上述的功能已经完全满足我们的需求了，自动生成 sql 查询语句的关键点在于使用代码来完成字段的标签名的拼接，如下代码所示：
 ```go
 func insert(table string, data interface{})string{
