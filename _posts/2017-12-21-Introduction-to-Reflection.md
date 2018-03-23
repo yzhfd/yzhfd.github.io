@@ -1,5 +1,4 @@
-#反射机制介绍
-##反射机制介绍
+
 
 反射是指一门编程语言可以在运行时( runtime )检查其数据结构的能力。利用 Go 语言的反射机制，可以获取结构体的公有字段以及私有字段的标签名，甚至一些其他比较敏感的信息。
 
@@ -107,7 +106,3 @@ via：https://scene-si.org/2017/12/21/introduction-to-reflection/
 
 作者：[Tit Petric](https://scene-si.org)
 译者：[yzhfd](https://github.com/yzhfd)
-校对：[校对者ID](https://github.com/校对者ID)
-
-本文由 [GCTT](https://github.com/studygolang/GCTT) 原创编译，
-[Go中文网](https://studygolang.com/) 荣誉推出
