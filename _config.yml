@@ -15,9 +15,9 @@ text_color_theme: default #eg: default | dark | forest | ocean | chocolate | ora
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
-title: Someone's blog
+title: yzhfd的技术博客
 description: > #this means to ignore newlines until "nav_lists:"
-  Someone's Blog
+  入坑golang,学习nodejs,迷失在全栈的路上
 
 nav_lists:
   - titles:
