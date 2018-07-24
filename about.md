@@ -2,15 +2,12 @@
 layout: page
 titles:
   en: About
-  zh: 关于
+  zh: 关于我
   zh-Hans: 关于
   zh-Hant: 關於
 key: page-about
 ---
 
-欢迎大家来到我的博客。
-
-## 关于我
 - 2012年毕业于东南大学软件学院
 - 全栈工程师
 	+ 精通PHP开发 
